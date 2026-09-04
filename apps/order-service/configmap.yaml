@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: order-service-config
+  namespace: inno
+data:
+  SERVER_PORT: "8080"
+  SPRING_DATA_REDIS_HOST: "order-redis"
+  SPRING_DATA_REDIS_PORT: "6379"
+  AUTH_JWKS_URI: "http://auth-service:8080/.well-known/jwks.json"
+  USER_SERVICE_URL: "http://user-service:8080"
+  KAFKA_BOOTSTRAP_SERVERS: "payment-kafka:9092"
